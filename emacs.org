@@ -1,0 +1,7 @@
+#+STARTUP: indent
+
+* Emacs
+** magit
+*** branches
+*** commit
+*** remote
