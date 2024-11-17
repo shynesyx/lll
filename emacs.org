@@ -2,6 +2,12 @@
 
 * Emacs
 ** magit
-*** branches
-*** commit
-*** remote
+*** Getting started
+- The basic command: ~C-x g~
+- In Spacemacs: ~SPC g s~
+*** Concepts
+**** sections
+**** transient commands
+*** Branches
+*** Commit
+*** Working with remote
