@@ -1,7 +1,12 @@
 #+STARTUP: indent
 
 * Emacs
-** magit
+** Org
+** Dired
+The Directory Editor
+*** Directory
+- create directory: ~+~ (~dired-create-directory~)
+** Magit
 *** Getting started
 - The basic command: ~C-x g~
 - In Spacemacs: ~SPC g s~
