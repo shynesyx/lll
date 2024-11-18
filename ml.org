@@ -1,0 +1,71 @@
+#+STARTUP: indent
+#+STARTUP: latexpreview
+#+STARTUP: show2levels
+#+author: Yanxiang Shi
+#+email: yanxiang.shi@gmail.com
+
+* Machine Learning
+** Time series
+*** Applications
+- 
+*** Components of a times series
+- Trend: Long-term directionality.
+- Seasonality: Periodic fluctuations occurring at regular intervals, e,g., weekly, monthly, etc.
+- Cyclicality: Longer-term fluctuations, mostly representative of economic or business cycles.
+- Irregularity: noise, randomness, or residuals, which are unpredictable.
+*** Visualization
+- Line plots
+- Scatter plots
+- Seasonal plots
+- Lag plots
+- ACF and PACF
+*** Feature engineering
+- Missing values
+- Outliers
+**** Transformation
+- Log transformation
+- Box-Cox transformation
+- Fourier transformation
+**** Stationarity
+Constant statistical properties, e.g., mean, variance, etc., over time.
+***** Stationarity tests
+- ADF
+  - $H_0$: signal is not stationary
+  - $H_a$: signal is stationary
+- KPSS
+  - $H_0$: signal is stationary
+  - $H_a$: signal is not stationary
+***** Remove trends
+- Differencing
+- de-trending
+- rolling statistics
+*** Forecast
+**** Types of forecasts
+- Point forecasts
+- Interval forecasts
+**** Basic models
+- Explanatory model
+- Autoregressive (AR) model
+- Mixed model
+- Simple moving average (MA)
+- Simple exponential smoothing
+- Holt
+- Holt-Winters
+**** ARIMA models
+- AR
+- MA
+- ARMA
+- ARIMA
+- SARIMA
+- ARIMAX
+- SARIMAX
+- VARIMA
+- FARIMA
+**** Metrics
+- MAE
+- MAPE
+- MSE
+- RMSE
+*** Python libraries
+- statsmodels
+- Prophet (by Facebook)
