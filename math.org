@@ -1,0 +1,48 @@
+#+STARTUP: indent
+#+STARTUP: latexpreview
+#+STARTUP: show2levels
+
+* Math
+** Linear algebra
+** Calculus
+** Statistics and Probability
+*** Q-Q plot
+The quantile-quantile probability plot is used to compared two probability distributions.
+
+It could be used
+- to compare a sample to a theoretical distribution
+- or to compare two samples
+
+#+begin_src python :results file link
+  import numpy as np
+  import matplotlib as mpl
+  import matplotlib.pyplot as plt
+  import seaborn as sns
+  import statsmodels.api as sm
+
+  mpl.use('Agg')
+  sns.set_theme()
+
+  mu, sigma = 0, 1
+  s = np.random.normal(mu, sigma, 100)
+
+  fig, ax = plt.subplots(figsize=(4, 3))
+  sm.qqplot(s, line='s', ax=ax)
+  fig.tight_layout()
+  fname = './images/math/qqplot_normal.svg'
+  fig.savefig(fname, format='svg')
+
+  return fname
+#+end_src
+
+#+RESULTS:
+[[file:./images/math/qqplot_normal.svg]]
+
+**** Steps to plot
+1. Sort data
+2. Calculate quantiles, i.e., rank divided by number of observations
+3. Calculate quantiles for the theoretical distribution (or other sample)
+4. Plot the points
+
+**** Interpretation
+The most straightforward interpretation is to draw a straight line. If all points fall roughly along the line, it is indicative of a good fit. Otherwise, the data cannot be described by the theoretical distribution, or the two distributions deviate from each other significantly.
